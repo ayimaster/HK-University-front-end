@@ -3,74 +3,99 @@
 
 <body>
   <div>
-    <h2>Your Face</h2>
-    <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
-      <p>Your image:</p>
-      <input type="file" name="fileToUpload">
+    <form>
+      <fieldset>
+        <legend>
+          <h2>Your Face</h2>
+        </legend>
+
+
+        <p>Your image:</p>
+        <input type="file" name="fileToUpload">
+
+        <p>Image Preview:
+          <img id="preview"></p>
+      </fieldset>
     </form>
-    <p>Image Preview:
-      <img id="preview"></p>
   </div>
 
   <div>
-    <h2>Your General Details</h2>
-    <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
-      <label for="name">Name:</label>
-      <input type="text" name="firstname" value="Your full name" autofocus>
-      <br>
-      <label for="gender">Gender</label>
-      <input type="radio" name="iq" value="female">Female
-      <input type="radio" name="iq" value="male" checked>Male
-      <br>
-      <label for="age">Age:</label>
-      <input type="text" name="age" value="18" required>
-      <br>
-      <label for="birthday">Date of birth:</label>
-      <input type="date" name="dateOfBirth">
-      <br>
-      <label for="color">Favourite colour:</label>
-      <input type="color" name="colour">
-      <br>
-      <p>Which country:</p>
-      <select name="countries">
-        <option value="usa">USA</option>
-        <option value="ru">Russia</option>
-        <option value="uk">United Kingdom</option>
-        <option value="cn">China</option>
-      </select>
-    </form>
-  </div>
-  <div>
-    <h2>Your Indicators</h2>
-    <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
-      <label for="height">Height:</label>
-      Short
-      <input type="range" min="0" max="100" step="5" value="50" name="mood"> Tall
-      <br>
-      <label for="salary">Salary:</label>
-      Poor
-      <input type="range" min="0" max="100" step="5" value="50" name="mood"> Rich
-      <br>
-    </form>
-  </div>
-  <div>
-    <h2>Your Contact Information</h2>
+
     <form>
-      <label for="email">Email:</label>
-      <input type="text" name="email">
-      <br>
-            <label for="mobile">Mobile:</label>
-      <input type="tel" name="tel">
-      <br>
-      Address:<textarea rows="3" cols="60" name="feedback">
-      </textarea>
-    <br>
-    Method to contact you:<input type="radio" name="Email">Email
-    <input type="radio" name="whatsapp">Whatsapp
-    <input type="radio" name="inChat">In-app chat <br>
+      <fieldset>
+        <legend>
+          <h2>Your General Details</h2>
+        </legend>
+        <label for="name">Name:</label>
+        <input type="text" name="firstname" value="Your full name" autofocus>
+        <br>
+        <label for="gender">Gender</label>
+        <input type="radio" name="iq" value="female">Female
+        <input type="radio" name="iq" value="male" checked>Male
+        <br>
+        <label for="age">Age:</label>
+        <input type="text" name="age" value="18" required>
+        <br>
+        <label for="birthday">Date of birth:</label>
+        <input type="date" name="dateOfBirth" required>
+        <br>
+        <label for="color">Favourite colour:</label>
+        <input type="color" name="colour">
+        <br>
+        <p>Which country:</p>
+        <select name="countries">
+          <option value="usa">USA</option>
+          <option value="ru">Russia</option>
+          <option value="uk">United Kingdom</option>
+          <option value="cn">China</option>
+        </select>
+      </fieldset>
     </form>
   </div>
-<form><input type="submit" value="Submit"></form>
+  <div>
+
+    <form>
+      <fieldset>
+        <legend>
+          <h2>Your Indicators</h2>
+        </legend>
+        <label for="height">Height:</label>
+        Short
+        <input type="range" min="0" max="100" step="5" value="50" name="mood"> Tall
+        <br>
+        <label for="salary">Salary:</label>
+        Poor
+        <input type="range" min="0" max="100" step="5" value="50" name="mood"> Rich
+        <br>
+      </fieldset>
+    </form>
+  </div>
+  <div>
+
+    <form>
+      <fieldset>
+        <legend>
+          <h2>Your Contact Information</h2>
+        </legend>
+        <label for="email">Email:</label>
+        <input type="text" name="email" required>
+        <br>
+        <label for="mobile">Mobile:</label>
+        <input type="tel" name="tel">
+        <br> Address:
+        <textarea rows="3" cols="60" name="feedback">
+        </textarea>
+        <br> Method to contact you:
+        <input type="checkbox" name="Email">Email
+        <input type="checkbox" name="whatsapp">Whatsapp
+        <input type="checkbox" name="inChat">In-app chat
+        <br>
+      </fieldset>
+    </form>
+  </div>
+  <form>
+    <input type="submit" value="Submit">
+  </form>
 </body>
 
 </html>
