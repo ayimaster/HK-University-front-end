@@ -5,6 +5,7 @@
   <title>Form</title>
   <meta name="author" content="Ayima Okeeva">
 </head>
+
 <body>
   <style>
     fieldset {
@@ -18,10 +19,32 @@
       display: inline-block;
       text-align: right;
       vertical-align: text-top;
+      width: 180px;
+    }
+
+    .purple {
+      background-color: purple;
+      text-align: center;
+      width: 80px;
+      vertical-align: top;
+      display: inline-block;
+    }
+
+    .green {
+      background-color: greenyellow;
+      text-align: center;
+      width: 80px;
+      vertical-align: top;
+            display: inline-block;
+
     }
 
     input {
-/*      width: auto;*/
+      /*      width: auto;*/
+    }
+
+    input[type=range] {
+      text-align: center;
     }
 
     .feedback {
@@ -33,7 +56,7 @@
       font-size: 40px
     }
 
-    inpu:hover {
+    input:hover {
       font-size: 20px
     }
   </style>
@@ -44,12 +67,13 @@
       <form method="post" enctype="multipart/form-data" action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
         <fieldset>
           <legend>
-            <h2>Your Face</h2>
+            <h3>Your Face</h3>
           </legend>
-          <p>Your image:</p>
+          <label for="name">Your image:</label>
           <input type="file" name="fileToUpload">
-          <p>Image Preview:
-            <img id="preview" ></p>
+          <br>
+          <label for="image">Image preview:</label>
+          <img id="preview"></p>
         </fieldset>
       </form>
 
@@ -58,7 +82,7 @@
       <form>
         <fieldset>
           <legend>
-            <h2>Your General Details</h2>
+            <h3>Your General Details</h3>
           </legend>
           <label for="name">Name:</label>
           <input type="text" name="firstname" value="Your full name" autofocus>
@@ -76,7 +100,7 @@
           <label for="color">Favourite colour:</label>
           <input type="color" name="colour">
           <br>
-          <p>Which country:</p>
+          <label for="country">Which country:</label>
           <select name="countries">
             <option value="usa">USA</option>
             <option value="ru">Russia</option>
@@ -90,15 +114,17 @@
       <form>
         <fieldset>
           <legend>
-            <h2>Your Indicators</h2>
+            <h3>Your Indicators</h3>
           </legend>
           <label for="height">Height:</label>
-          Short
-          <input type="range" min="0" max="100" step="5" value="50" name="mood"> Tall
+          <div class="purple">Short</div>
+          <input type="range" min="0" max="100" step="5" value="50" name="height" class="labelStyle">
+          <div class="green">Tall</div>
           <br>
           <label for="salary">Salary:</label>
-          Poor
-          <input type="range" min="0" max="100" step="5" value="50" name="mood"> Rich
+          <div class="purple">Poor</div>
+          <input type="range" min="0" max="100" step="5" value="50" name="salary" class="labelStyle">
+          <div class="green">Rich</div>
           <br>
         </fieldset>
       </form>
@@ -107,14 +133,15 @@
       <form>
         <fieldset>
           <legend>
-            <h2>Your Contact Information</h2>
+            <h3>Your Contact Information</h3>
           </legend>
           <label for="email">Email:</label>
           <input type="text" name="email" required>
           <br>
           <label for="mobile">Mobile:</label>
           <input type="tel" name="tel">
-          <br> Address:
+          <br>
+          <label for="salary">Address:</label>
           <textarea rows="3" cols="60" name="feedback">
           </textarea>
           <br> Method to contact you:
